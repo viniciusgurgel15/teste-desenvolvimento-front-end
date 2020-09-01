@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Github Viewer</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+    <div class="main" id="main"></div>
+</body>
+<script src="/static/js/utils/Utils.js"></script>
+<script src="/static/js/services/RepositoriosService.js"></script>
+<script src="/static/js/services/UsuarioService.js"></script>
+
+<script src="/static/js/components/ComunComponent.js"></script>
+<script src="/static/js/components/DetalhesRepositorioComponent.js"></script>
+<script src="/static/js/components/RepositoriosComponent.js"></script>
+<script src="/static/js/components/DetalhesUsuarioComponent.js"></script>
+<script src="/static/js/components/HomeComponent.js"></script>
+
+<script src="/static/js/controllers/DetalhesRepositorioController.js"></script>
+<script src="/static/js/controllers/RepositorioController.js"></script>
+<script src="/static/js/controllers/DetalhesUsuarioController.js"></script>
+<script src="/static/js/controllers/HomeController.js"></script>
+<script src="/static/js/rotas/Rotas.js"></script>
+<script>
+    let rotas = new Rotas();
+    window.onpopstate = function (event) {
+        rotas.update();
+    }
+</script>
+</html>
